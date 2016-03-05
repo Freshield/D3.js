@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<meta charset="UTF-8">
-	<title>Test7</title>
+    <meta charset="UTF-8">
+    <title>Test8</title>
     <style>
         .axis path,
         .axis line{
@@ -27,7 +27,23 @@
     </style>
     <script type="text/javascript" src="d3/d3.min.js" charset="utf-8"></script>
     <script type="text/javascript">
-        function test(){
+        function test() {
+            /*var svg = d3.select("body")
+                .append("svg")
+                .attr("width",600)
+                .attr("height",600);
+
+            var circle = svg.append("circle")
+                .attr("cx",100)
+                .attr("cy",100)
+                .attr("r",45)
+                .style("fill","green");
+
+            circle.transition()
+                .duration(1500)
+                .attr("cx",300)
+                .style("fill","red")
+                .attr("r",25);*/
             //create svg
             var width = 400;
             var height = 400;
@@ -74,12 +90,27 @@
                     return xScale(i)+rectPadding/2;
                 })
                 .attr("y",function(d){
-                    return yScale(d);
+                    var min = yScale.domain()[0];
+                    return yScale(min);
                 })
                 .attr("width",xScale.rangeBand()-rectPadding)
                 .attr("height",function(d){
+                    return 0;
+                })
+                .transition()
+                .delay(function(d,i){
+                    return i * 200;
+                })
+                .duration(2000)
+                .ease("bounce")
+                .attr("y",function(d){
+                    return yScale(d);
+                })
+                .attr("height",function(d){
                     return height - padding.top - padding.bottom - yScale(d);
                 });
+
+
 
             var texts = svg.selectAll(".MyText")
                 .data(dataset)
@@ -90,9 +121,6 @@
                 .attr("x",function(d,i){
                     return xScale(i) + rectPadding/2;
                 })
-                .attr("y",function(d){
-                    return yScale(d);
-                })
                 .attr("dx",function(){
                     return (xScale.rangeBand() - rectPadding)/2;
                 })
@@ -101,6 +129,19 @@
                 })
                 .text(function(d){
                     return d;
+                })
+                .attr("y",function(d){
+                    var min = yScale.domain()[0];
+                    return yScale(min);
+                })
+                .transition()
+                .delay(function(d,i){
+                    return i * 200;
+                })
+                .duration(2000)
+                .ease("bounce")
+                .attr("y",function(d){
+                    return yScale(d);
                 });
 
 
@@ -115,7 +156,6 @@
                 .attr("class","axis")
                 .attr("transform","translate("+padding.left+","+padding.top+")")
                 .call(yAxis);
-
 
 
         }
