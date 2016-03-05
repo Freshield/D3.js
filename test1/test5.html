@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test5</title>
+    <script type="text/javascript" src="d3/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var dataset = [250,40,80,400,20,210,170,130,90];
+        var dataset2 = [1.2,2.3,0.9,1.5,3.3];
+
+        function test(){
+            var width = 300;
+            var height = 300;
+            var linear2 = d3.scale.linear()
+                .domain([0,d3.max(dataset)])
+                .range([0,250]);
+
+            var svg = d3.select("body").append("svg").attr("width",width).attr("height",height);
+
+            var rectHeight = 25;
+
+            svg.selectAll("rect")
+                .data(dataset)
+                .enter()
+                .append("rect")
+                .attr("x",20)
+                .attr("y",function(d,i){
+                    return i * rectHeight;
+                })
+                .attr("width",function(d,i){
+                    return linear2(d);
+                })
+                .attr("height",rectHeight-2)
+                .attr("fill","steelblue");
+
+
+            var min = d3.min(dataset2);
+            var max = d3.max(dataset2);
+
+            var linear = d3.scale.linear()
+                .domain([min,max])
+                .range([0,300]);
+
+            document.getElementsByTagName("p")[0].innerHTML += linear(0.9)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += linear(2.3)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += linear(3.3)+"<br>";
+
+
+            var index = [0,1,2,3,4,5];
+            var color = ["red","blue","green","yellow","black"];
+
+            var ordinal = d3.scale.ordinal()
+                .domain(index)
+                .range(color);
+
+
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(0)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(1)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(2)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(3)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(4)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(5)+"<br>";
+            document.getElementsByTagName("p")[0].innerHTML += ordinal(6)+"<br>";
+
+        }
+    </script>
+</head>
+<body onload="test();">
+    <p>show something<br></p>
+
+</body>
+</html>
