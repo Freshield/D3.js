@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Test2</title>
+    <script type="text/javascript" src="d3/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        function test(){
+
+            var str = "China";
+            var dataset = ["I like dogs","I like cats","I like snakes"];
+
+            var body = d3.select("body");
+            var p = body.selectAll("p");
+
+            //p.datum(str);
+
+            //p.text(function(d,i){
+            //    return "The " + i +"th element datum is " + d;
+           // });
+
+            p.data(dataset).text(function(d,i){
+                return d;
+            });
+
+
+
+        }
+
+
+    </script>
+
+</head>
+<body onload="test();">
+    <p>Apple</p>
+    <p>Pear</p>
+    <p>Banana</p>
+
+</body>
+</html>
