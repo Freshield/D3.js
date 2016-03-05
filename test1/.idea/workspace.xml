@@ -64,18 +64,28 @@
       <file leaf-file-name="test5.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.41025642">
+            <state vertical-scroll-proportion="10.666667">
               <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test6.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test6.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0853932">
-              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+            <state vertical-scroll-proportion="-2.871795">
+              <caret line="19" column="35" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test7.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test7.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.101123594">
+              <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -99,6 +109,7 @@
         <option value="$PROJECT_DIR$/test4.html" />
         <option value="$PROJECT_DIR$/test5.html" />
         <option value="$PROJECT_DIR$/test6.html" />
+        <option value="$PROJECT_DIR$/test7.html" />
       </list>
     </option>
   </component>
@@ -169,10 +180,7 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="recentsLimit" value="5" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.test6.html">
-    <configuration default="false" name="test2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test1/test2.html">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.test7.html">
     <configuration default="false" name="test3.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test1/test3.html">
       <method />
     </configuration>
@@ -183,6 +191,9 @@
       <method />
     </configuration>
     <configuration default="false" name="test6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test1/test6.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="test7.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test1/test7.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -218,19 +229,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test2.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test3.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.test4.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.test5.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.test6.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test3.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test4.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.test5.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.test6.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.test7.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test6.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test5.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.test4.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.test3.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.test2.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test7.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test6.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.test5.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.test4.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.test3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -307,18 +318,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.871795">
+          <caret line="19" column="35" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.41025642">
+        <state vertical-scroll-proportion="10.666667">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test6.html">
+    <entry file="file://$PROJECT_DIR$/test7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0853932">
-          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.101123594">
+          <caret line="104" column="12" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
           <folding />
         </state>
       </provider>
