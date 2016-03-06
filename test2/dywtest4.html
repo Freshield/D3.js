@@ -3,8 +3,86 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>Test4</title>
+	<script type="text/javascript" src="d3/d3.js"></script>
 </head>
 <body>
+	<script type="text/javascript">
+		var dataset = [];
+		var xMarks = [];
+		var w = 600;
+		var h = 600;
+		var padding = 40;
+
+		//create data
+
+		getData();
+
+		//create svg
+
+		var svg = d3.select("body")
+				.append("svg")
+				.attr("width",w)
+				.attr("height",h);
+
+		//add background
+		svg.append("g")
+				.append("rect")
+				.attr("x",0)
+				.attr("y",0)
+				.attr("width",w)
+				.attr("height",h)
+				.style("fill","#FFF")
+				.style("stroke-width",2)
+				.style("stroke","#E7E7E7");
+
+		//add scaleor
+
+		var xScale = d3.scale.linear()
+				.domain([0,dataset.length-1])
+				.range([padding,w-padding]);
+
+		var yScale = d3.scale.linear()
+				.domain([0,d3.max(dataset)])
+				.range([h-padding,padding]);
+
+		//define axis
+
+		var xAxis = d3.svg.axis()
+				.scale(xScale)
+				.orient("bottom")
+				.ticks(dataset.length);
+
+		//define axis bar
+
+		var xBar = svg.append("g")
+				.attr("class","axis")
+				.attr("transform","translate(0,"+(h-padding)+")")
+				.call(xAxis)
+				.selectAll("text")
+				.text(function(d){
+					return xMarks[d];
+				});
+
+
+
+
+
+		function getData(){
+			var dataNum = 15;
+			dataset = [];
+			xMarks = [];
+			for(var i = 1;i<dataNum;i++){
+				dataset.push(Math.round(Math.random()*h));
+				xMarks.push("Tag"+i);
+			}
+
+		}
+
+
+
+
+
+	</script>
 
 </body>
 </html>
