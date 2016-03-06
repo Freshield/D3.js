@@ -6,6 +6,10 @@
 	<script type="text/javascript" src="d3/d3.js"></script>
 </head>
 <body>
+<div id="total" style="border: dashed 1px black;padding: 10px;width: 100px;">
+	<svg id="wsvg"></svg>
+</div>
+
 
 <script type="text/javascript">
 
@@ -13,8 +17,7 @@
 
 	var dataset = [10,110,210,310,410,510];
 
-	var svg = d3.select("body")
-			.append("svg")
+	var svg = d3.select("svg#wsvg")
 			.attr("width",610)
 			.attr("height",h);
 
