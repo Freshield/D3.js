@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dywtest1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dywtest1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dywtest1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48387095">
-              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+            <state vertical-scroll-proportion="-39.57895">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#svg#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -47,6 +47,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dywtest2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dywtest2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37849462">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -60,6 +70,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dywtest1.html" />
+        <option value="$PROJECT_DIR$/dywtest2.html" />
       </list>
     </option>
   </component>
@@ -131,8 +142,11 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="recentsLimit" value="5" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.dywtest1.html">
+  <component name="RunManager" selected="JavaScript Debug.dywtest2.html">
     <configuration default="false" name="dywtest1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test2/dywtest1.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="dywtest2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test2/dywtest2.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -167,12 +181,14 @@
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.dywtest1.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.dywtest2.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.dywtest1.html" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.dywtest2.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.dywtest1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -219,8 +235,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dywtest1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48387095">
-          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        <state vertical-scroll-proportion="-39.57895">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#svg#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -238,6 +254,14 @@
             <element signature="n#style#0;n#svg#7;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#svg#8;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dywtest2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37849462">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Test2</title>
+	<script type="text/javascript" src="d3/d3.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var h = 600;
+
+	var dataset = [10,110,210,310,410,510];
+
+	var svg = d3.select("body")
+			.append("svg")
+			.attr("width",610)
+			.attr("height",h);
+
+	var bar = svg.selectAll("rect")
+			.data(dataset)
+			.enter()
+			.append("rect");
+
+	bar.attr("x",function(p){
+		return p;
+	})
+
+	bar.attr("y",function(p){
+		return h-p;
+	})
+			.attr("width",90)
+			.attr("height",function(p){
+				return p;
+			})
+
+	svg.style("border","1px dashed black");
+
+</script>
+
+</body>
+</html>
