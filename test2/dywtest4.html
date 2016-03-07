@@ -29,6 +29,10 @@
 	</p>
 
 	<script type="text/javascript">
+
+
+
+
 		var dataset = [];
 		var xMarks = [];
 		var w = 700;
@@ -142,11 +146,6 @@
 				.attr("fill","green");
 
 
-		setTimeout(function(){
-			drawChart();
-			setTimeout(arguments.callee,500);
-		},500);
-
 
 		var timeNum;
 
@@ -154,9 +153,11 @@
 			var dataNum = 40;
 			dataset = [];
 			xMarks = [];
+
 			for(var i = 1;i<dataNum;i++){
-				dataset.push(Math.round(Math.random()*h));
-				xMarks.push("Tag"+i);
+				//dataset.push(Math.round(Math.random()*h));
+				dataset.push(0);
+				xMarks.push(+i);
 				timeNum = i;
 			}
 
@@ -164,9 +165,10 @@
 
 		function changeData(){
 			dataset.shift();
-			dataset.push(Math.round(Math.random()*50));
+			//dataset.push(Math.round(Math.random()*h));
+			dataset.push(receJSON);
 			xMarks.shift();
-			xMarks.push("Tag"+(++timeNum));
+			xMarks.push((++timeNum));
 		}
 
 		function drawChart() {
@@ -215,6 +217,45 @@
 						return yScale(d);
 					});
 		}
+
+
+		function CreateXHR(){
+			if (window.XMLHttpRequest)
+			{
+				//对浏览器 IE7+, Firefox, Chrome, Opera, Safari
+				return new XMLHttpRequest();
+			}
+			else
+			{
+				//对浏览器 IE6, IE5
+				return new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		}
+
+
+		setTimeout(function(){
+
+			xmlhttp = CreateXHR();
+
+			xmlhttp.open("GET","http://yangyufresh.com/test.json",true);
+			xmlhttp.send();
+
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					var getedJSON = xmlhttp.responseText;
+					var obj = JSON.parse(getedJSON);
+					receJSON = obj.value;
+					drawChart();
+				}
+			}
+
+
+			setTimeout(arguments.callee,2000);
+		},2000);
+
+		var xmlhttp;
+		var receJSON;
+
 
 
 
