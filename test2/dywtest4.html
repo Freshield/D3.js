@@ -4,18 +4,43 @@
 	<meta charset="UTF-8">
 	<title>Test4</title>
 	<script type="text/javascript" src="d3/d3.js"></script>
+	<script type="text/javascript">
+
+	</script>
+	<style type="text/css">
+	body{
+	height: 100%;
+	}
+	.axis path,
+	.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+	}
+	.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+	}
+	</style>
 </head>
 <body>
+	<p align="left">
+		<button onclick="drawChart();">Refresh</button>
+	</p>
+
 	<script type="text/javascript">
 		var dataset = [];
 		var xMarks = [];
-		var w = 600;
-		var h = 600;
+		var w = 700;
+		var h = 500;
 		var padding = 40;
 
 		//create data
 
 		getData();
+		var data1 = [10,30,45,90,34,26,75,46,37,87,23,45,67,35];
+		var data1 = [30,45,90,34,26,75,46,37,87,23,45,67,35,67];
+		var data1 = [45,90,34,26,75,46,37,87,23,45,67,35,67,89];
 
 		//create svg
 
@@ -38,7 +63,7 @@
 		//add scaleor
 
 		var xScale = d3.scale.linear()
-				.domain([0,dataset.length-1])
+				.domain([0,dataset.length-2])
 				.range([padding,w-padding]);
 
 		var yScale = d3.scale.linear()
@@ -64,20 +89,132 @@
 				});
 
 
+		//define y axis
+
+		var yAxis = d3.svg.axis()
+				.scale(yScale)
+				.orient("left")
+				.ticks(10);
+
+		//define axis bar
+
+		var yBar = svg.append("g")
+				.attr("class","axis")
+				.attr("transform","translate("+padding+",0)")
+				.call(yAxis);
 
 
+		//add lines
+
+		var lineFunction = d3.svg.line()
+				.interpolate("linear")
+				.x(function(d,i){
+					return xScale(i);
+				})
+				.y(function(d){
+					return yScale(d);
+				});
+
+		//add polyline
+
+
+		var path = svg.append("path")
+				.attr("d",lineFunction(dataset))
+				.attr("class","thepath")
+				.style("fill","none")
+				.style("stroke-width",1)
+				.style("stroke","#F00")
+				.style("stroke-opacity",0.9);
+
+		//add point
+
+		svg.selectAll("circle")
+				.data(dataset)
+				.enter()
+				.append("circle")
+				.attr("cx",function(d,i){
+					return xScale(i);
+				})
+				.attr("cy",function(d){
+					return yScale(d);
+				})
+				.attr("r",5)
+				.attr("fill","green");
+
+
+		setTimeout(function(){
+			drawChart();
+			setTimeout(arguments.callee,500);
+		},500);
+
+
+		var timeNum;
 
 		function getData(){
-			var dataNum = 15;
+			var dataNum = 40;
 			dataset = [];
 			xMarks = [];
 			for(var i = 1;i<dataNum;i++){
 				dataset.push(Math.round(Math.random()*h));
 				xMarks.push("Tag"+i);
+				timeNum = i;
 			}
 
 		}
 
+		function changeData(){
+			dataset.shift();
+			dataset.push(Math.round(Math.random()*50));
+			xMarks.shift();
+			xMarks.push("Tag"+(++timeNum));
+		}
+
+		function drawChart() {
+
+			changeData();
+
+
+			yScale = d3.scale.linear()
+					.domain([0, d3.max(dataset)])
+					.range([h - padding, padding]);
+
+			yAxis = d3.svg.axis()
+					.scale(yScale)
+					.orient("left")
+					.ticks(10);
+
+			xScale = d3.scale.linear()
+					.domain([0,dataset.length-2])
+					.range([padding,w-padding]);
+
+			xAxis = d3.svg.axis()
+					.scale(xScale)
+					.orient("bottom")
+					.ticks(dataset.length);
+
+			xBar.transition()
+					.duration(1000)
+					.text(function(d){
+						return xMarks[d];
+					})
+					.call(xAxis);
+
+			yBar.transition()
+					.duration(1000)
+					.call(yAxis);
+
+			path//.transition()
+					//.duration(1000)
+					.attr("d", lineFunction(dataset));
+
+			svg.selectAll("circle")
+					.data(dataset)
+					//.transition()
+					//.duration(1000)
+					.attr("cy", function (d) {
+						return yScale(d);
+					});
+		}
 
 
 
