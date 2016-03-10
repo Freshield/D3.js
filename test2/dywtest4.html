@@ -237,12 +237,15 @@
 
 			xmlhttp = CreateXHR();
 
-			xmlhttp.open("GET","http://yangyufresh.com/test.json",true);
+			xmlhttp.open("GET","http://1-dot-yangyufreshield.appspot.com/HelloServlet",true);
 			xmlhttp.send();
 
 			xmlhttp.onreadystatechange = function(){
-				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+				alert(xmlhttp.status);
+				alert(xmlhttp.readyState);
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 0){
 					var getedJSON = xmlhttp.responseText;
+					alert(getedJSON);
 					var obj = JSON.parse(getedJSON);
 					receJSON = obj.value;
 					drawChart();
